@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float speed;
+
     private void Update()
     {
         if (GameManager.Instance.gameState == GameManager.GameState.InGame)
@@ -12,4 +13,5 @@ public class PlayerController : MonoBehaviour
             transform.position += transform.forward * (Time.deltaTime * speed);
         }
     }
+
 }
