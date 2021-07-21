@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class StackTrigger : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.tag == "Pick")
+        if (collision.gameObject.tag == "Pick")
         {
-            StackManager.instance.PickUp(other.gameObject, true, "Untagged",false);
+            StackManager.instance.PickUp(collision.gameObject, true, "Untagged", false);
         }
     }
 }

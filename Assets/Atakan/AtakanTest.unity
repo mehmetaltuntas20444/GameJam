@@ -1172,6 +1172,7 @@ GameObject:
   - component: {fileID: 140756879}
   - component: {fileID: 140756878}
   - component: {fileID: 140756877}
+  - component: {fileID: 140756882}
   m_Layer: 0
   m_Name: Pen (1)
   m_TagString: Pick
@@ -1190,10 +1191,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &140756878
 CapsuleCollider:
@@ -1203,7 +1204,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140756876}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -1266,13 +1267,27 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140756876}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.72, y: 2, z: 77.7}
+  m_LocalPosition: {x: 0.26, y: 2, z: 77.7}
   m_LocalScale: {x: 0.5, y: 1.5, z: 0.5}
   m_Children:
   - {fileID: 627983107}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &140756882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140756876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &148289583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1286,6 +1301,7 @@ GameObject:
   - component: {fileID: 148289586}
   - component: {fileID: 148289585}
   - component: {fileID: 148289584}
+  - component: {fileID: 148289589}
   m_Layer: 0
   m_Name: Pen (1)
   m_TagString: Pick
@@ -1304,10 +1320,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &148289585
 CapsuleCollider:
@@ -1317,7 +1333,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 148289583}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -1387,6 +1403,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &148289589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148289583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &185639440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,6 +1430,7 @@ GameObject:
   - component: {fileID: 185639443}
   - component: {fileID: 185639442}
   - component: {fileID: 185639441}
+  - component: {fileID: 185639446}
   m_Layer: 0
   m_Name: Pen (1)
   m_TagString: Pick
@@ -1418,10 +1449,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &185639442
 CapsuleCollider:
@@ -1431,7 +1462,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185639440}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -1501,6 +1532,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185639446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185639440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &196638104
 GameObject:
   m_ObjectHideFlags: 0
@@ -1514,6 +1559,7 @@ GameObject:
   - component: {fileID: 196638107}
   - component: {fileID: 196638106}
   - component: {fileID: 196638105}
+  - component: {fileID: 196638110}
   m_Layer: 0
   m_Name: Pen (1)
   m_TagString: Pick
@@ -1532,10 +1578,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &196638106
 CapsuleCollider:
@@ -1545,7 +1591,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196638104}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -1615,6 +1661,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196638110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196638104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &227150045
 GameObject:
   m_ObjectHideFlags: 0
@@ -3083,6 +3143,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387403324}
+  - component: {fileID: 387403325}
   m_Layer: 0
   m_Name: Parent
   m_TagString: Untagged
@@ -3105,6 +3166,20 @@ Transform:
   m_Father: {fileID: 2091290998}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &387403325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387403323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ce804f3daffe09448430b90e90bf2fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  range: 8
+  smoothness: 2
 --- !u!1 &411019963
 GameObject:
   m_ObjectHideFlags: 0
@@ -6054,6 +6129,7 @@ GameObject:
   - component: {fileID: 719281064}
   - component: {fileID: 719281063}
   - component: {fileID: 719281062}
+  - component: {fileID: 719281067}
   m_Layer: 0
   m_Name: Pen (2)
   m_TagString: Pick
@@ -6072,10 +6148,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &719281063
 CapsuleCollider:
@@ -6085,7 +6161,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 719281061}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -6155,6 +6231,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &719281067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 719281061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &723023782
 GameObject:
   m_ObjectHideFlags: 0
@@ -6818,6 +6908,7 @@ GameObject:
   - component: {fileID: 785611836}
   - component: {fileID: 785611835}
   - component: {fileID: 785611834}
+  - component: {fileID: 785611839}
   m_Layer: 0
   m_Name: Pen (3)
   m_TagString: Pick
@@ -6836,10 +6927,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &785611835
 CapsuleCollider:
@@ -6849,7 +6940,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785611833}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -6919,6 +7010,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &785611839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 785611833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &787896022
 GameObject:
   m_ObjectHideFlags: 0
@@ -7697,6 +7802,7 @@ GameObject:
   - component: {fileID: 866042528}
   - component: {fileID: 866042527}
   - component: {fileID: 866042526}
+  - component: {fileID: 866042531}
   m_Layer: 0
   m_Name: Pen (4)
   m_TagString: Pick
@@ -7715,10 +7821,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &866042527
 CapsuleCollider:
@@ -7728,7 +7834,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 866042525}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -7798,6 +7904,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &866042531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866042525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &870099008
 GameObject:
   m_ObjectHideFlags: 0
@@ -9236,6 +9356,7 @@ GameObject:
   - component: {fileID: 1070709382}
   - component: {fileID: 1070709381}
   - component: {fileID: 1070709380}
+  - component: {fileID: 1070709385}
   m_Layer: 0
   m_Name: Pen (1)
   m_TagString: Pick
@@ -9254,10 +9375,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &1070709381
 CapsuleCollider:
@@ -9267,7 +9388,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070709379}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -9337,6 +9458,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1070709385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070709379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &1088199198
 GameObject:
   m_ObjectHideFlags: 0
@@ -9582,7 +9717,6 @@ GameObject:
   - component: {fileID: 1092600031}
   - component: {fileID: 1092600030}
   - component: {fileID: 1092600029}
-  - component: {fileID: 1092600028}
   - component: {fileID: 1092600032}
   - component: {fileID: 1092600033}
   - component: {fileID: 1092600035}
@@ -9609,20 +9743,6 @@ Transform:
   m_Father: {fileID: 387403324}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1092600028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1092600026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ce804f3daffe09448430b90e90bf2fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 8
-  smoothness: 2
 --- !u!136 &1092600029
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9631,7 +9751,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092600026}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -9711,10 +9831,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!114 &1092600034
 MonoBehaviour:
@@ -10830,6 +10950,7 @@ GameObject:
   - component: {fileID: 1176099374}
   - component: {fileID: 1176099373}
   - component: {fileID: 1176099372}
+  - component: {fileID: 1176099377}
   m_Layer: 0
   m_Name: Pen (1)
   m_TagString: Pick
@@ -10848,10 +10969,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &1176099373
 CapsuleCollider:
@@ -10861,7 +10982,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1176099371}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -10931,6 +11052,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1176099377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1176099371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &1214878438
 GameObject:
   m_ObjectHideFlags: 0
@@ -15809,6 +15944,7 @@ GameObject:
   - component: {fileID: 1894756173}
   - component: {fileID: 1894756172}
   - component: {fileID: 1894756171}
+  - component: {fileID: 1894756176}
   m_Layer: 0
   m_Name: Pen (6)
   m_TagString: Pick
@@ -15827,10 +15963,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &1894756172
 CapsuleCollider:
@@ -15840,7 +15976,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1894756170}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -15910,6 +16046,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1894756176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1894756170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &1948348991
 GameObject:
   m_ObjectHideFlags: 0
@@ -16208,6 +16358,7 @@ GameObject:
   - component: {fileID: 2010077671}
   - component: {fileID: 2010077670}
   - component: {fileID: 2010077668}
+  - component: {fileID: 2010077669}
   m_Layer: 0
   m_Name: Pen (1)
   m_TagString: Pick
@@ -16226,11 +16377,25 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &2010077669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010077667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!136 &2010077670
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -16239,7 +16404,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010077667}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -16864,6 +17029,7 @@ GameObject:
   - component: {fileID: 2061536951}
   - component: {fileID: 2061536950}
   - component: {fileID: 2061536949}
+  - component: {fileID: 2061536954}
   m_Layer: 0
   m_Name: Pen (5)
   m_TagString: Pick
@@ -16882,10 +17048,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 122
   m_CollisionDetection: 0
 --- !u!136 &2061536950
 CapsuleCollider:
@@ -16895,7 +17061,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2061536948}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5000001
   m_Height: 2
@@ -16965,6 +17131,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061536954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2061536948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf930317a5096d42b3d8060edffb246, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scalepow: 0.2
+  maxHealth: 0
 --- !u!1 &2070004443
 GameObject:
   m_ObjectHideFlags: 0

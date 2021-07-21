@@ -33,36 +33,34 @@ public class StackManager : MonoBehaviour
         }
         pickedObject.transform.parent = parent;
         Vector3 desPos = prevObject.localPosition;
-        if(parent.childCount < 5)
+        if(parent.childCount < 7)
         {
             desPos.x += distanceBetwwenObjects;
         }
-        else if(parent.childCount >= 5 && parent.childCount < 8)
+        else if(parent.childCount >= 7 && parent.childCount < 12)
         {
-            Debug.Log("girdim1");
-            if (parent.childCount == 5)
+            if (parent.childCount == 7)
             {
                 desPos.x += distanceBetwwenObjects;
                 desPos.x = 0;
             }
             desPos.x += -distanceBetwwenObjects;
         }
-        else if(parent.childCount >= 8)
+        else if(parent.childCount >= 12)
         {
-            Debug.Log("girdim");
-            if(parent.childCount == 8)
+            if(parent.childCount == 12)
             {
                 desPos.z += forwardDistance;
                 desPos.x = 0;
                 desPos.x += distanceBetwwenObjects;
             }
-            else if(parent.childCount < 11)
+            else if(parent.childCount < 15)
             {
                 desPos.x += distanceBetwwenObjects;
             }
-            else if (parent.childCount >= 11)
+            else if (parent.childCount >= 15)
             {
-                if (parent.childCount == 11)
+                if (parent.childCount == 15)
                 {
                     desPos.x += distanceBetwwenObjects;
                     desPos.x = 0;
