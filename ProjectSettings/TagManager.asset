@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pencil
   - Pick
+  - Cube
   layers:
   - Default
   - TransparentFX

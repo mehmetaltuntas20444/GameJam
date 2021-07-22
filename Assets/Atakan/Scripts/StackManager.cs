@@ -71,7 +71,7 @@ public class StackManager : MonoBehaviour
 
 
         //desPos.x += leftOrRight ? distanceBetwwenObjects : -distanceBetwwenObjects;
-
+        pickedObject.GetComponent<Pencils>().enabled = true;
         pickedObject.transform.localPosition = desPos;
         prevObject = pickedObject.transform;
     }

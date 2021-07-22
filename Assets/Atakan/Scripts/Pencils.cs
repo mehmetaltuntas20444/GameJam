@@ -33,6 +33,10 @@ public class Pencils : MonoBehaviour
         {
             var scale = new Vector3(transform.localScale.x, transform.localScale.y-Time.deltaTime*scalepow, transform.localScale.z);
             ScaleAround(-transform.up,scale);
+            if(transform.localScale.y <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -52,7 +56,7 @@ public class Pencils : MonoBehaviour
         transform.localScale = newScale;
         transform.localPosition = FP;
     }
-    
+
     /* public void ScaleAround(GameObject target, Vector3 pivot, Vector3 newScale)
      {
      Vector3 A = target.transform.localPosition;
@@ -70,4 +74,11 @@ public class Pencils : MonoBehaviour
      target.transform.localPosition = FP;
      }
      */
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Cube")
+        {
+            Destroy(gameObject);
+        }
+    }
 }
