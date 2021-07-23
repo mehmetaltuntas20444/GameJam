@@ -2,23 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StackManager : MonoBehaviour
+public class StackManager : Singleton<StackManager>
 {
-    public static StackManager instance;
-
     [SerializeField] private float distanceBetwwenObjects;
     [SerializeField] private float forwardDistance;
     [SerializeField] private Transform prevObject;
     [SerializeField] private Transform parent;
-
-
-    private void Awake()
-    {
-        if(instance == null)
-        {
-            instance = this;
-        }
-    }
+    
     void Start()
     {
         distanceBetwwenObjects = prevObject.localScale.x;
@@ -74,9 +64,5 @@ public class StackManager : MonoBehaviour
         pickedObject.GetComponent<Pencils>().enabled = true;
         pickedObject.transform.localPosition = desPos;
         prevObject = pickedObject.transform;
-    }
-    void Update()
-    {
-        
     }
 }
