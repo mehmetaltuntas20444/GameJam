@@ -8,7 +8,7 @@ public class StackTrigger : MonoBehaviour
     {
         if (collision.gameObject.tag == "Pick")
         {
-            StackManager.Instance.PickUp(collision.gameObject, true, "Untagged", false);
+            StackManager.Instance.PickUp(collision.gameObject, true, "Untagged");
         }
     }
 }

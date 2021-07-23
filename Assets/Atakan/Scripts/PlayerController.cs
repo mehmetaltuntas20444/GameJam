@@ -12,6 +12,10 @@ public class PlayerController : MonoBehaviour
         {
             transform.position += transform.forward * (Time.deltaTime * speed);
         }
+        if(StackManager.Instance.parent.childCount == 0)
+        {
+            GameManager.Instance.gameState = GameManager.GameState.GameOver;
+        }
     }
 
 }

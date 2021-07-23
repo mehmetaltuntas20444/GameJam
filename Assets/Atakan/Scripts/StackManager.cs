@@ -6,16 +6,19 @@ public class StackManager : Singleton<StackManager>
 {
     [SerializeField] private float distanceBetwwenObjects;
     [SerializeField] private float forwardDistance;
-    [SerializeField] private Transform prevObject;
-    [SerializeField] private Transform parent;
-    
+    [SerializeField] public Transform prevObject;
+    [SerializeField] public Transform parent;
+    [SerializeField] public GameObject prevR;
+    [SerializeField] public GameObject prevL;
     void Start()
     {
-        distanceBetwwenObjects = prevObject.localScale.x;
-        forwardDistance = prevObject.localScale.z;
+        distanceBetwwenObjects = 0.5f;
+        forwardDistance = 0.7f;
     }
 
-    public void PickUp(GameObject pickedObject, bool needTag = false, string tag=null, bool leftOrRight = true)
+ 
+
+    public void PickUp(GameObject pickedObject, bool needTag = false, string tag=null)
     {
         if (needTag)
         {
@@ -26,6 +29,7 @@ public class StackManager : Singleton<StackManager>
         if(parent.childCount < 7)
         {
             desPos.x += distanceBetwwenObjects;
+            prevR = pickedObject;
         }
         else if(parent.childCount >= 7 && parent.childCount < 12)
         {
@@ -35,6 +39,7 @@ public class StackManager : Singleton<StackManager>
                 desPos.x = 0;
             }
             desPos.x += -distanceBetwwenObjects;
+            prevL = pickedObject;
         }
         else if(parent.childCount >= 12)
         {
@@ -43,10 +48,12 @@ public class StackManager : Singleton<StackManager>
                 desPos.z += forwardDistance;
                 desPos.x = 0;
                 desPos.x += distanceBetwwenObjects;
+                prevR = pickedObject;
             }
             else if(parent.childCount < 15)
             {
                 desPos.x += distanceBetwwenObjects;
+                prevR = pickedObject;
             }
             else if (parent.childCount >= 15)
             {
@@ -56,13 +63,13 @@ public class StackManager : Singleton<StackManager>
                     desPos.x = 0;
                 }
                 desPos.x += -distanceBetwwenObjects;
+                prevL = pickedObject;
+
             }
         }
-
-
-        //desPos.x += leftOrRight ? distanceBetwwenObjects : -distanceBetwwenObjects;
         pickedObject.GetComponent<Pencils>().enabled = true;
         pickedObject.transform.localPosition = desPos;
         prevObject = pickedObject.transform;
     }
+
 }

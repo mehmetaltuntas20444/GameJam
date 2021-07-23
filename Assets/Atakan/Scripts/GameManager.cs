@@ -23,7 +23,7 @@ public class GameManager : Singleton<GameManager>
             gameState = GameState.InGame;
         if (gameState == GameState.GameOver)
         {
-            
+            Debug.Log("game over");
         }
     }
 }

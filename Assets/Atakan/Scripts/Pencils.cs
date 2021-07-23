@@ -53,11 +53,21 @@ public class Pencils : MonoBehaviour
      target.transform.localPosition = FP;
      }
      */
+
+
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Cube")
+        if (collision.gameObject.tag == "CubeRight")
         {
-            Destroy(gameObject);
+            Destroy(StackManager.Instance.prevR);
+            StackManager.Instance.prevObject = StackManager.Instance.parent.GetChild(transform.childCount - 1);
+        }
+        if (collision.gameObject.tag == "CubeLeft")
+        {
+            Destroy(StackManager.Instance.prevL);
+            StackManager.Instance.prevObject = StackManager.Instance.parent.GetChild(transform.childCount - 1);
         }
     }
+
 }
