@@ -7,7 +7,8 @@ public class GameManager : Singleton<GameManager>
     {
         Start,
         InGame,
-        Finish
+        Finish,
+        GameOver
     }
     public GameState gameState;
 
@@ -20,5 +21,9 @@ public class GameManager : Singleton<GameManager>
     {
         if (Input.GetMouseButtonDown(0))
             gameState = GameState.InGame;
+        if (gameState == GameState.GameOver)
+        {
+            
+        }
     }
 }

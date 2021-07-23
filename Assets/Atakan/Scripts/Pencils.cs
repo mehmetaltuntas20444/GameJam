@@ -6,34 +6,13 @@ using UnityEngine;
 public class Pencils : MonoBehaviour
 {
     public float scalepow;
-    private float _health;
-    [SerializeField] private float maxHealth;
-    public float Health
-    {
-        get
-        {
-            return _health;
-        }
-        set
-        {
-            if(_health > maxHealth)
-                _health = maxHealth;
-            else if (_health < 0)
-            {
-                _health = 0;
-            }
-            else
-                _health = value;
-        }
-    }
-
     private void Update()
     {
         if (GameManager.Instance.gameState == GameManager.GameState.InGame)
         {
-            var scale = new Vector3(transform.localScale.x, transform.localScale.y-Time.deltaTime*scalepow, transform.localScale.z);
+            var scale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z-Time.deltaTime*scalepow);
             ScaleAround(-transform.up,scale);
-            if(transform.localScale.y <= 0)
+            if(transform.localScale.z <= 0)
             {
                 Destroy(gameObject);
             }
