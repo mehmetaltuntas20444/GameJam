@@ -8,7 +8,7 @@ public class StackManager : Singleton<StackManager>
     [SerializeField] private float forwardDistance;
     [SerializeField] public Transform parent;
 
-   public List<Pencils> pencils = new List<Pencils>();
+    public List<Pencils> pencils = new List<Pencils>();
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class StackManager : Singleton<StackManager>
 
     public void delayedSortList()
     {
-        Invoke("sortPencils", 0.4f);
+            Invoke("sortPencils", 0.3f);
     }
 
     public void PickUp(GameObject pickedObject, bool needTag = false, string tag=null)

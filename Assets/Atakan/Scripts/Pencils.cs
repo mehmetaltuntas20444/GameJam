@@ -37,7 +37,6 @@ public class Pencils : MonoBehaviour
     {
         StackManager.Instance.popUp(listIndex);
         Destroy(gameObject);
-       // Invoke("destroyPen", 0.2f);
         StackManager.Instance.delayedSortList();
     }
 
