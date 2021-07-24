@@ -16,6 +16,15 @@ public class PlayerController : MonoBehaviour
         {
             GameManager.Instance.gameState = GameManager.GameState.GameOver;
         }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Time.timeScale = 0.1f;
+        }
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            Time.timeScale = 1;
+        }
     }
 
 }

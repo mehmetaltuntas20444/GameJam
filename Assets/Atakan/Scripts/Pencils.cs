@@ -5,7 +5,14 @@ using UnityEngine;
 
 public class Pencils : MonoBehaviour
 {
+    public int listIndex;
     public float scalepow;
+    public bool moving;
+    public Vector3 destiny;
+    public float movingTime=0.2f;
+
+    private float temptime;
+    public Vector3 firstLocalPos;
     private void Update()
     {
         if (GameManager.Instance.gameState == GameManager.GameState.InGame)
@@ -14,9 +21,24 @@ public class Pencils : MonoBehaviour
             ScaleAround(-transform.up,scale);
             if(transform.localScale.z <= 0)
             {
-                Destroy(gameObject);
+                kill();
             }
         }
+
+        if(moving)
+        {
+            transform.localPosition = Vector3.Lerp(firstLocalPos, destiny, temptime/ movingTime );
+            temptime += Time.deltaTime;
+            if (temptime > movingTime) moving = false;
+        }
+    }
+
+    private void kill()
+    {
+        StackManager.Instance.popUp(listIndex);
+        Destroy(gameObject);
+       // Invoke("destroyPen", 0.2f);
+        StackManager.Instance.delayedSortList();
     }
 
     public void ScaleAround(Vector3 pivot, Vector3 newScale)
@@ -53,21 +75,11 @@ public class Pencils : MonoBehaviour
      target.transform.localPosition = FP;
      }
      */
-
-
-
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "CubeRight")
+        if (collision.gameObject.tag == "Cube" && GetComponent<StackTrigger>().inPlayer)
         {
-            Destroy(StackManager.Instance.prevR);
-            StackManager.Instance.prevObject = StackManager.Instance.parent.GetChild(transform.childCount - 1);
-        }
-        if (collision.gameObject.tag == "CubeLeft")
-        {
-            Destroy(StackManager.Instance.prevL);
-            StackManager.Instance.prevObject = StackManager.Instance.parent.GetChild(transform.childCount - 1);
+            kill();
         }
     }
-
 }

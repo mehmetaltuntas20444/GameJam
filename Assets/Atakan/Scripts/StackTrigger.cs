@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class StackTrigger : MonoBehaviour
 {
+    public bool inPlayer;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Pick")
+        if (collision.gameObject.tag == "Pick" && inPlayer)
         {
             StackManager.Instance.PickUp(collision.gameObject, true, "Untagged");
         }
