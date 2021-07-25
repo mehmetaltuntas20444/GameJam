@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 5675061754987514231}
   - component: {fileID: 5675061754987514229}
   m_Layer: 0
-  m_Name: Pen (5)
+  m_Name: PenYellow
   m_TagString: Pick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4346913665385597561}
   m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: 0, y: 0.5, z: 36.52}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 45, y: 45, z: 40}
   m_Children:
   - {fileID: 1726293222540841150}
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listIndex: 0
-  scalepow: 20
+  scalepow: 8
   moving: 0
   destiny: {x: 0, y: 0, z: 0}
   movingTime: 0.2

@@ -9,6 +9,7 @@ TagManager:
   - Cube
   - CubeRight
   - CubeLeft
+  - FinishLevel
   layers:
   - Default
   - TransparentFX

@@ -80,5 +80,9 @@ public class Pencils : MonoBehaviour
         {
             kill();
         }
+        if(collision.gameObject.tag == "FinishLevel")
+        {
+            GameManager.Instance.gameState = GameManager.GameState.Finish;
+        }
     }
 }
