@@ -17,7 +17,7 @@ public class StackManager : Singleton<StackManager>
         if (transform.childCount > 0)
         {
             pencils.Add(transform.GetChild(0).GetComponent<Pencils>());
-            sortPencils();
+            sortPencils(40);
         }
     }
 
@@ -45,16 +45,18 @@ public class StackManager : Singleton<StackManager>
         pickedObject.transform.parent = parent;
         pickedObject.GetComponent<StackTrigger>().inPlayer = true;
         pencils.Add(pickedObject.GetComponent<Pencils>());
-        sortPencils();
+        sortPencils(40);
         pickedObject.GetComponent<Pencils>().enabled = true;
     }
     float _tempLeftRightDistance;
     float _tempForwardDistance;
         
-    public void sortPencils()
+    public void sortPencils(float movingTime)
     {
+
         for (int i = 0; i < pencils.Count; i++)
         {
+            pencils[i].movingTime = movingTime;
             pencils[i].listIndex = i;
             getDistances(i);
             Vector3 _newPos = new Vector3(_tempLeftRightDistance, 0.5f, _tempForwardDistance);
@@ -62,9 +64,8 @@ public class StackManager : Singleton<StackManager>
             if (pencils[i])
             {
                 pencils[i].destiny = _newPos;
-                pencils[i].firstLocalPos = pencils[i].transform.localPosition;
-                pencils[i].moving = true;
             }
+            pencils[i].moving = true;
             //LeanTween.moveLocal(pencils[i].gameObject, _newPos, 0.2f);
         }
     }

@@ -9,10 +9,10 @@ public class Pencils : MonoBehaviour
     public float scalepow;
     public bool moving;
     public Vector3 destiny;
-    public float movingTime=0.2f;
+    public float movingTime;
 
     private float temptime;
-    public Vector3 firstLocalPos;
+
     private void Update()
     {
         if (GameManager.Instance.gameState == GameManager.GameState.InGame)
@@ -27,9 +27,9 @@ public class Pencils : MonoBehaviour
 
         if(moving)
         {
-            transform.localPosition = Vector3.Lerp(firstLocalPos, destiny, temptime/ movingTime );
-            temptime += Time.deltaTime;
-            if (temptime > movingTime) moving = false;
+            transform.localPosition = Vector3.Lerp(transform.localPosition, destiny, Time.deltaTime* movingTime );
+            //temptime += Time.deltaTime;
+            //if (temptime > movingTime) moving = false;
         }
     }
 
@@ -37,7 +37,8 @@ public class Pencils : MonoBehaviour
     {
         StackManager.Instance.popUp(listIndex);
         Destroy(gameObject);
-        StackManager.Instance.delayedSortList();
+        StackManager.Instance.sortPencils(2);
+
     }
 
     public void ScaleAround(Vector3 pivot, Vector3 newScale)
