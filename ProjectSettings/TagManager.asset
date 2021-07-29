@@ -10,6 +10,7 @@ TagManager:
   - CubeRight
   - CubeLeft
   - FinishLevel
+  - Tile
   layers:
   - Default
   - TransparentFX

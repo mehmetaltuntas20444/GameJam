@@ -8,6 +8,7 @@ public class StackManager : Singleton<StackManager>
     [SerializeField] private float forwardDistance;
     [SerializeField] public Transform parent;
 
+
     public List<Pencils> pencils = new List<Pencils>();
 
     void Start()
@@ -66,7 +67,6 @@ public class StackManager : Singleton<StackManager>
                 pencils[i].destiny = _newPos;
             }
             pencils[i].moving = true;
-            //LeanTween.moveLocal(pencils[i].gameObject, _newPos, 0.2f);
         }
     }
 

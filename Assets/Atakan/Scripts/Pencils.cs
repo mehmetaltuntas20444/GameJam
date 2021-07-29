@@ -11,15 +11,15 @@ public class Pencils : MonoBehaviour
     public Vector3 destiny;
     public float movingTime;
 
-    private float temptime;
 
     private void Update()
     {
+
         if (GameManager.Instance.gameState == GameManager.GameState.InGame)
         {
             var scale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z-Time.deltaTime*scalepow);
             ScaleAround(-transform.up,scale);
-            if(transform.localScale.z <= 0)
+            if(transform.localScale.z <= 0 || transform.position.y < 0)
             {
                 kill();
             }
@@ -32,7 +32,6 @@ public class Pencils : MonoBehaviour
             //if (temptime > movingTime) moving = false;
         }
     }
-
     private void kill()
     {
         StackManager.Instance.popUp(listIndex);
@@ -86,4 +85,6 @@ public class Pencils : MonoBehaviour
             GameManager.Instance.gameState = GameManager.GameState.Finish;
         }
     }
+
+
 }

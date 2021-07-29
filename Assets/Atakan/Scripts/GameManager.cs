@@ -22,7 +22,7 @@ public class GameManager : Singleton<GameManager>
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && gameState != GameState.Finish)
         {
             gameState = GameState.InGame;
             startScreen.SetActive(false);

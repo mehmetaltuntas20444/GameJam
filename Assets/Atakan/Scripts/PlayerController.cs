@@ -15,6 +15,11 @@ public class PlayerController : MonoBehaviour
         if(StackManager.Instance.parent.childCount == 0)
         {
             GameManager.Instance.gameState = GameManager.GameState.GameOver;
+            speed = 0;
+        }
+        if(GameManager.Instance.gameState == GameManager.GameState.Finish)
+        {
+            speed = 0;
         }
 
         if(Input.GetKeyDown(KeyCode.Space))
