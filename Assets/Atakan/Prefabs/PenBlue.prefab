@@ -132,7 +132,7 @@ TrailRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d12a27f3fcf73cc44929f622124f8138, type: 2}
+  - {fileID: 2100000, guid: fcdd34a4336b9d64f9fe4349540e4b22, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -246,7 +246,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5991192732741883615}
-  m_LocalRotation: {x: -0.70710576, y: -0, z: -0, w: 0.70710784}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 45, y: 45, z: 40}
   m_Children:
@@ -312,11 +312,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listIndex: 0
-  scalepow: 8
   moving: 0
   destiny: {x: 0, y: 0, z: 0}
   movingTime: 0.2
-  firstLocalPos: {x: 0, y: 0, z: 0}
 --- !u!1 &7722249194446679893
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ public class StackManager : Singleton<StackManager>
         pickedObject.transform.parent = parent;
         pickedObject.GetComponent<StackTrigger>().inPlayer = true;
         pencils.Add(pickedObject.GetComponent<Pencils>());
-        sortPencils(40);
+        sortPencils(30);
         pickedObject.GetComponent<Pencils>().enabled = true;
     }
     float _tempLeftRightDistance;

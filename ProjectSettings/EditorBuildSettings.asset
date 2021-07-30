@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Atakan/AtakanTest.unity
+    path: Assets/Atakan/Level.unity
     guid: c5a433543a3efc8488cd8f11928b6ae7
   - enabled: 1
-    path: Assets/Atakan/AtakanTest 1.unity
-    guid: 5e636f3dc7975e746a3b0ff6f04842fa
+    path: Assets/Atakan/Level2.unity
+    guid: abe4d40be41323f46bb2a9f2f3749d48
   m_configObjects: {}

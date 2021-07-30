@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class Pencils : MonoBehaviour
 {
-    public int listIndex;
-    public float scalepow;
+    public int listIndex; 
+    float scalepow = 5f;
     public bool moving;
     public Vector3 destiny;
     public float movingTime;
@@ -28,15 +28,13 @@ public class Pencils : MonoBehaviour
         if(moving)
         {
             transform.localPosition = Vector3.Lerp(transform.localPosition, destiny, Time.deltaTime* movingTime );
-            //temptime += Time.deltaTime;
-            //if (temptime > movingTime) moving = false;
         }
     }
     private void kill()
     {
         StackManager.Instance.popUp(listIndex);
         Destroy(gameObject);
-        StackManager.Instance.sortPencils(2);
+        StackManager.Instance.sortPencils(4f);
 
     }
 
@@ -56,24 +54,6 @@ public class Pencils : MonoBehaviour
         transform.localScale = newScale;
         transform.localPosition = FP;
     }
-
-    /* public void ScaleAround(GameObject target, Vector3 pivot, Vector3 newScale)
-     {
-     Vector3 A = target.transform.localPosition;
-     Vector3 B = pivot;
- 
-     Vector3 C = A - B; // diff from object pivot to desired pivot/origin
- 
-     float RS = newScale.x / target.transform.localScale.x; // relataive scale factor
- 
-     // calc final position post-scale
-     Vector3 FP = B + C * RS;
- 
-     // finally, actually perform the scale/translation
-     target.transform.localScale = newScale;
-     target.transform.localPosition = FP;
-     }
-     */
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Cube" && GetComponent<StackTrigger>().inPlayer)
